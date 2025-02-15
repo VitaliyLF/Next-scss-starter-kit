@@ -262,9 +262,7 @@ input {
   &:-webkit-autofill:hover,
   &:-webkit-autofill:focus {
     background-color: transparent !important;
-    transition:
-      background-color 10000000s 10000000s,
-      box-shadow 10000000s 10000000s;
+    transition: background-color 10000000s 10000000s, box-shadow 10000000s 10000000s;
   }
 
   &[type='search']::-ms-clear,
@@ -288,10 +286,6 @@ textarea {
   }
 
   &::-moz-resizer {
-    display: none;
-  }
-
-  &::resizer {
     display: none;
   }
 }

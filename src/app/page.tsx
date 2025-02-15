@@ -1,9 +1,12 @@
-const Page = () => {
+import Main from '@/components/common/Main'
+import HeroSection from '@/components/sections/common/HeroSection'
+
+const HomePage = () => {
   return (
-    <div className="">
-      <div className="">Page</div>
-    </div>
+    <Main>
+      <HeroSection />
+    </Main>
   )
 }
 
-export default Page
+export default HomePage
