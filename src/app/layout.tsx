@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 
-import Footer from '@/components/layout/Footer'
-import Header from '@/components/layout/Header'
 import PageWrapper from '@/components/layout/PageWrapper'
+import Footer from '@/components/widgets/Footer'
+import Header from '@/components/widgets/Header'
 import '@/styles/main.scss'
 
 export const metadata: Metadata = {
@@ -14,17 +14,17 @@ export const metadata: Metadata = {
 const myriadPro = localFont({
   src: [
     {
-      path: './fonts/MyriadProBold.woff2',
+      path: './assets/fonts/MyriadProBold.woff2',
       weight: '700',
       style: 'normal',
     },
     {
-      path: './fonts/MyriadProRegular.woff2',
+      path: './assets/fonts/MyriadProRegular.woff2',
       weight: '400',
       style: 'normal',
     },
     {
-      path: './fonts/MyriadProLight.woff2',
+      path: './assets/fonts/MyriadProLight.woff2',
       weight: '300',
       style: 'normal',
     },
@@ -36,7 +36,7 @@ const myriadPro = localFont({
 const DMSans = localFont({
   src: [
     {
-      path: './fonts/DMSansRegular.woff2',
+      path: './assets/fonts/DMSansRegular.woff2',
       weight: '400',
       style: 'normal',
     },
@@ -51,11 +51,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="page">
       <body className={`${myriadPro.variable} ${DMSans.variable} page__body`}>
         <PageWrapper>
           <Header />
-          {children}
+          <main className="page__main">{children}</main>
           <Footer />
         </PageWrapper>
       </body>

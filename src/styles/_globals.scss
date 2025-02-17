@@ -10,6 +10,11 @@ html {
   height: 100%;
 }
 
+.icon {
+  width: 1.5em;
+  height: 1.5em;
+}
+
 .page__body {
   @include fluid-text(18, 14);
 

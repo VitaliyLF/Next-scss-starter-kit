@@ -1,4 +1,4 @@
-import TwitterIcon from '@/assets/svg/twitter.svg'
+import SearchIcon from '@/components/shared/icons/search-icon.svg'
 
 import styles from './HeroSection.module.scss'
 import { IHeroSectionProps } from './type'
@@ -10,7 +10,7 @@ const HeroSection = ({ className }: IHeroSectionProps) => {
   return (
     <div className={cx('hero', className)}>
       <div className="">HeroSection</div>
-      <TwitterIcon className={cx('hero__twitter-icon')} />
+      <SearchIcon />
     </div>
   )
 }

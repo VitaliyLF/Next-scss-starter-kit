@@ -1,11 +1,10 @@
-import Main from '@/components/common/Main'
-import HeroSection from '@/components/sections/HeroSection'
+import HeroSection from '@/components/widgets/HeroSection'
 
 const HomePage = () => {
   return (
-    <Main>
+    <>
       <HeroSection />
-    </Main>
+    </>
   )
 }
 
