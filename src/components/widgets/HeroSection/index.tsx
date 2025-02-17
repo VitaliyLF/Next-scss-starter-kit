@@ -10,7 +10,7 @@ const HeroSection = ({ className }: IHeroSectionProps) => {
   return (
     <div className={cx('hero', className)}>
       <div className="">HeroSection</div>
-      <SearchIcon />
+      <SearchIcon className={cx('hero__icon')} />
     </div>
   )
 }
