@@ -1,3 +1,4 @@
+import Container from '@/components/layout/Container'
 import ProfileIcon from '@/components/shared/icons/profile-icon.svg'
 import SearchIcon from '@/components/shared/icons/search-icon.svg'
 
@@ -9,11 +10,13 @@ const cx = classNames.bind(styles)
 
 const HeroSection = ({ className }: IHeroSectionProps) => {
   return (
-    <div className={cx('hero', className)}>
-      <div className="">HeroSection</div>
-      <SearchIcon className={cx('hero__icon')} />
-      <ProfileIcon className={cx('hero__icon')} />
-    </div>
+    <section className={cx('hero', className)}>
+      <Container className={cx('hero__container')}>
+        HeroSection
+        <SearchIcon className={cx('hero__icon')} />
+        <ProfileIcon className={cx('hero__icon')} />
+      </Container>
+    </section>
   )
 }
 
