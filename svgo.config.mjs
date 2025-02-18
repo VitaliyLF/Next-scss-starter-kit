@@ -22,6 +22,12 @@ const config = {
         prefix: 'customPrefix',
       },
     },
+    {
+      name: 'convertColors',
+      params: {
+        currentColor: true,
+      },
+    },
   ],
 }
 

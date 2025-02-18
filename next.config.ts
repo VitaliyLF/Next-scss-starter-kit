@@ -1,5 +1,4 @@
 import type { NextConfig } from 'next'
-
 import path from 'path'
 
 const nextConfig: NextConfig = {
@@ -8,25 +7,10 @@ const nextConfig: NextConfig = {
     additionalData: `@use '@/styles/helpers' as *;`,
   },
   webpack: (config) => {
-    const fileLoaderRule = config.module.rules.find(
-      (rule: { test?: { test?: (arg: string) => boolean } }) => rule.test?.test?.('.svg'),
-    )
-
-    config.module.rules.push(
-      {
-        ...fileLoaderRule,
-        test: /\.svg$/i,
-        resourceQuery: /url/,
-      },
-      {
-        test: /\.svg$/i,
-        issuer: /\.[jt]sx?$/,
-        resourceQuery: { not: [/url/] },
-        use: ['@svgr/webpack'],
-      },
-    )
-
-    fileLoaderRule.exclude = /\.svg$/i
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
+    })
 
     return config
   },
@@ -40,6 +24,15 @@ const nextConfig: NextConfig = {
               options: {
                 icon: '1em',
                 svgProps: { className: 'icon' },
+                expandProps: 'end',
+                svgoConfig: {
+                  plugins: [
+                    {
+                      name: 'convertColors',
+                      params: { currentColor: true },
+                    },
+                  ],
+                },
               },
             },
           ],

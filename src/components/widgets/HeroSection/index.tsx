@@ -1,3 +1,4 @@
+import ProfileIcon from '@/components/shared/icons/profile-icon.svg'
 import SearchIcon from '@/components/shared/icons/search-icon.svg'
 
 import styles from './HeroSection.module.scss'
@@ -11,6 +12,7 @@ const HeroSection = ({ className }: IHeroSectionProps) => {
     <div className={cx('hero', className)}>
       <div className="">HeroSection</div>
       <SearchIcon className={cx('hero__icon')} />
+      <ProfileIcon className={cx('hero__icon')} />
     </div>
   )
 }
