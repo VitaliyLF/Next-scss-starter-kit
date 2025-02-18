@@ -23,8 +23,6 @@ const nextConfig: NextConfig = {
               loader: '@svgr/webpack',
               options: {
                 icon: '1em',
-                svgProps: { className: 'icon' },
-                expandProps: 'end',
                 svgoConfig: {
                   plugins: [
                     {
