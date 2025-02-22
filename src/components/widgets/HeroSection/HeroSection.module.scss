@@ -1,12 +1,12 @@
 .hero {
   &__icon {
-    color: red;
-    width: 100px;
-    height: 100px;
+    color: #ffffff;
+    width: 20px;
+    height: 20px;
     transition: color 0.3s ease-in-out;
 
     @include hover {
-      color: blue;
+      color: currentcolor;
     }
   }
 }

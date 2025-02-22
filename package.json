@@ -6,10 +6,11 @@
     "dev": "next dev --turbopack",
     "build": "npm run lint && npm run format && npm run svgo && next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "next lint  && npm run stylelint",
     "lint:fix": "eslint --fix \"src/**/*.{js,jsx,ts,tsx}\"",
     "svgo": "svgo -f src/components/shared/icons",
-    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\""
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
+    "stylelint": "stylelint \"src/**/*.{scss,sass}\" --fix"
   },
   "dependencies": {
     "next": "15.1.7",
@@ -33,6 +34,9 @@
     "eslint-plugin-react": "^7.37.4",
     "prettier": "^3.5.1",
     "sass": "^1.85.0",
+    "stylelint": "^16.14.1",
+    "stylelint-config-prettier-scss": "^1.0.0",
+    "stylelint-config-standard-scss": "^14.0.0",
     "typescript": "^5"
   }
 }

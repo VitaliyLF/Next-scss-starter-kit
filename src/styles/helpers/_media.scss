@@ -6,25 +6,25 @@ $mobile: 767.98;
 $mobile-s: 480.98;
 
 @mixin laptop {
-  @media (max-width: rem($laptop)) {
+  @media (width <= rem($laptop)) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media (max-width: rem($tablet)) {
+  @media (width <= rem($tablet)) {
     @content;
   }
 }
 
 @mixin mobile {
-  @media (max-width: rem($mobile)) {
+  @media (width <= rem($mobile)) {
     @content;
   }
 }
 
 @mixin mobile-s {
-  @media (max-width: rem($mobile-s)) {
+  @media (width <= rem($mobile-s)) {
     @content;
   }
 }
