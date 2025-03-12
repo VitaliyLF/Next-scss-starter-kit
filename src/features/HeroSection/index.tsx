@@ -1,5 +1,5 @@
-import Container from '@/components/layout/Container'
-import SearchIcon from '@/components/shared/icons/search-icon.svg'
+import SearchIcon from '@/shared/components/icons/search-icon.svg'
+import Container from '@/shared/components/layout/Container'
 
 import styles from './HeroSection.module.scss'
 import { IHeroSectionProps } from './type'
