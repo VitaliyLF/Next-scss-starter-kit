@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 
-import Footer from '@/features/Footer'
-import Header from '@/features/Header/components'
+import Footer from '@/modules/Footer'
+import Header from '@/modules/Header'
 import favicon from '@/public/favicon.ico'
-import PageWrapper from '@/shared/components/layout/PageWrapper'
+import Providers from '@/shared/components/layout/Providers'
 import '@/styles/main.scss'
 
 export const metadata: Metadata = {
@@ -57,11 +57,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="page">
       <body className={`${myriadPro.variable} ${DMSans.variable} page__body`}>
-        <PageWrapper>
+        <Providers>
           <Header />
           <main className="page__main">{children}</main>
           <Footer />
-        </PageWrapper>
+        </Providers>
       </body>
     </html>
   )
