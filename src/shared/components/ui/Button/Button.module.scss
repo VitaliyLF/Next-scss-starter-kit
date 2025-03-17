@@ -3,4 +3,68 @@
   color: var(--color-light);
   padding: rem(10) rem(20);
   border-radius: rem(10);
+
+  &.primary {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+  }
+
+  &.secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-light);
+  }
+
+  &.tertiary {
+    background-color: var(--color-tertiary);
+    color: var(--color-light);
+  }
+
+  &.small {
+    padding: rem(10) rem(20);
+  }
+
+  &.medium {
+    padding: rem(15) rem(30);
+  }
+
+  &.large {
+    padding: rem(20) rem(40);
+  }
+
+  &.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &.loading {
+    opacity: 0.5;
+    cursor: progress;
+  }
+
+  &.hasIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(10);
+  }
+
+  &.iconLeft {
+    flex-direction: row-reverse;
+  }
+
+  &.iconRight {
+    flex-direction: row;
+  }
+
+  // &:hover {
+  //   background-color: var(--color-primary-hover);
+  // }
+
+  // &:active {
+  //   background-color: var(--color-primary-active);
+  // }
+
+  // &:focus {
+  //   outline: none;
+  // }
 }
