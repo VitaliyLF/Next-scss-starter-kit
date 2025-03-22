@@ -1,9 +1,9 @@
 import SearchIcon from '@/shared/components/icons/search-icon.svg'
 import Container from '@/shared/components/layout/Container'
-import Button from '@/shared/components/ui/Button'
+import { Button } from '@/shared/components/ui/Button'
 
 import styles from './HeroSection.module.scss'
-import { IHeroSectionProps } from './type'
+import { IHeroSectionProps } from './HeroSection.types'
 import classNames from 'classnames/bind'
 
 const cx = classNames.bind(styles)
@@ -18,10 +18,7 @@ const HeroSection = ({ className }: IHeroSectionProps) => {
           className={cx('hero__button')}
           variant="primary"
           size="small"
-          ariaLabel="Click me"
-          title="Click me"
-          iconPosition="right"
-          icon={<SearchIcon className={cx('hero__icon')} />}>
+          startIcon={<SearchIcon aria-hidden="true" />}>
           Click me
         </Button>
       </Container>

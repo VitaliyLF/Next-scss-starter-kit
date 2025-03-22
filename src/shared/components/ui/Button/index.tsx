@@ -1,10 +1,10 @@
 import styles from './Button.module.scss'
-import { IButtonProps } from './type'
+import { IButtonProps } from './Button.types'
 import classNames from 'classnames/bind'
 
 const cx = classNames.bind(styles)
 
-const Button = ({
+export const Button = ({
   children,
   className,
   variant,
@@ -15,10 +15,10 @@ const Button = ({
   ariaLabel,
   title,
   onClick,
-  icon,
-  iconPosition = 'left',
+  startIcon,
+  endIcon,
   fullWidth,
-  rounded,
+  text,
   isActive,
   ...props
 }: IButtonProps) => {
@@ -35,21 +35,19 @@ const Button = ({
         [styles.medium]: size === 'medium',
         [styles.large]: size === 'large',
         [styles.fullWidth]: fullWidth,
-        [styles.rounded]: rounded,
+        [styles.text]: text,
         [styles.active]: isActive,
         [styles.disabled]: disabled,
         [styles.loading]: loading,
-        [styles.hasIcon]: !!icon,
-        [styles.iconLeft]: icon && iconPosition === 'left',
-        [styles.iconRight]: icon && iconPosition === 'right',
+        [styles.startIcon]: startIcon,
+        [styles.endIcon]: endIcon,
       })}
       {...props}
       onClick={onClick}>
       {loading && <span className={cx('button__loading')} />}
-      {icon && icon}
+      {startIcon && startIcon}
       {children}
+      {endIcon && endIcon}
     </button>
   )
 }
-
-export default Button

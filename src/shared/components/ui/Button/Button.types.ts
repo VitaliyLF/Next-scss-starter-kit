@@ -7,13 +7,13 @@ export interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEleme
   variant?: 'primary' | 'secondary' | 'tertiary'
   size?: 'small' | 'medium' | 'large'
   fullWidth?: boolean
-  rounded?: boolean
+  text?: boolean
   isActive?: boolean
   disabled?: boolean
   loading?: boolean
   onClick?: () => void
   ariaLabel?: string
   title?: string
-  icon?: React.ReactNode
-  iconPosition?: 'left' | 'right'
+  startIcon?: React.ReactNode
+  endIcon?: React.ReactNode
 }

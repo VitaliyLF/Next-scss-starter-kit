@@ -1,3 +1,4 @@
+import Logo from '@/shared/components/common/Logo'
 import Container from '@/shared/components/layout/Container'
 
 import styles from './Header.module.scss'
@@ -9,7 +10,10 @@ const Header = () => {
   return (
     <header className={cx('header')}>
       <Container className={cx('header__container')}>
-        <div className="">Header</div>
+        <div className="">
+          Header
+          <Logo />
+        </div>
       </Container>
     </header>
   )
