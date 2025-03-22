@@ -1,11 +1,9 @@
 import HeroSection from '@/modules/HeroSection'
 
-const HomePage = () => {
+export default function HomePage() {
   return (
-    <>
+    <main>
       <HeroSection />
-    </>
+    </main>
   )
 }
-
-export default HomePage

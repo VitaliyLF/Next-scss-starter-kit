@@ -59,7 +59,7 @@ export default function RootLayout({
       <body className={`${myriadPro.variable} ${DMSans.variable} page__body`}>
         <Providers>
           <Header />
-          <main className="page__main">{children}</main>
+          {children}
           <Footer />
         </Providers>
       </body>
