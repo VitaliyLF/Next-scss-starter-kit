@@ -30,7 +30,6 @@ export const Button = ({
       className={cx('button', className, {
         [styles.primary]: variant === 'primary',
         [styles.secondary]: variant === 'secondary',
-        [styles.tertiary]: variant === 'tertiary',
         [styles.small]: size === 'small',
         [styles.medium]: size === 'medium',
         [styles.large]: size === 'large',

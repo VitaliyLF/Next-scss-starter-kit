@@ -1,4 +1,4 @@
-import Container from '@/shared/components/layout/Container'
+import Container from '@/components/layout/Container'
 
 import styles from './Footer.module.scss'
 import classNames from 'classnames/bind'

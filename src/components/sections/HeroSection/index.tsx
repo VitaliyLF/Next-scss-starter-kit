@@ -1,6 +1,6 @@
-import SearchIcon from '@/shared/components/icons/search-icon.svg'
-import Container from '@/shared/components/layout/Container'
-import { Button } from '@/shared/components/ui/Button'
+import SearchIcon from '@/components/icons/search-icon.svg'
+import Container from '@/components/layout/Container'
+import { Button } from '@/components/ui/Button'
 
 import styles from './HeroSection.module.scss'
 import { IHeroSectionProps } from './HeroSection.types'

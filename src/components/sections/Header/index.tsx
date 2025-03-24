@@ -1,5 +1,5 @@
-import Logo from '@/shared/components/common/Logo'
-import Container from '@/shared/components/layout/Container'
+import Logo from '@/components/common/Logo'
+import Container from '@/components/layout/Container'
 
 import styles from './Header.module.scss'
 import classNames from 'classnames/bind'
