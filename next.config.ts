@@ -12,8 +12,9 @@ const nextConfig: NextConfig = {
     if (process.env.ANALYZE === 'true') {
       config.plugins.push(
         new BundleAnalyzerPlugin({
-          analyzerMode: 'server',
-          analyzerPort: isServer ? 8890 : 8888,
+          // analyzerMode: 'server',
+          // analyzerPort: isServer ? 8890 : 8888,
+          analyzerMode: 'static',
           openAnalyzer: true,
           reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',
           defaultSizes: 'parsed',
