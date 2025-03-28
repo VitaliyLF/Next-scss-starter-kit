@@ -1,10 +1,12 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 
-import Providers from '@/components/layout/Providers'
-import Footer from '@/components/sections/Footer'
-import Header from '@/components/sections/Header'
+import { Providers } from '@/components/layout/Providers'
+import { Footer } from '@/components/sections/Footer'
+import { Header } from '@/components/sections/Header'
+
 import favicon from '@/public/favicon.ico'
+
 import '@/styles/main.scss'
 
 export const metadata: Metadata = {

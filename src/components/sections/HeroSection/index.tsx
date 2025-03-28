@@ -1,14 +1,15 @@
 import SearchIcon from '@/components/icons/search-icon.svg'
-import Container from '@/components/layout/Container'
+import { Container } from '@/components/layout/Container'
 import { Button } from '@/components/ui/Button'
 
 import styles from './HeroSection.module.scss'
 import { IHeroSectionProps } from './HeroSection.types'
+
 import classNames from 'classnames/bind'
 
 const cx = classNames.bind(styles)
 
-const HeroSection = ({ className }: IHeroSectionProps) => {
+export const HeroSection = ({ className }: IHeroSectionProps) => {
   return (
     <section className={cx('hero', className)}>
       <Container className={cx('hero__container')}>
@@ -25,5 +26,3 @@ const HeroSection = ({ className }: IHeroSectionProps) => {
     </section>
   )
 }
-
-export default HeroSection
