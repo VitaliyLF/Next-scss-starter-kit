@@ -17,10 +17,30 @@ export const HeroSection = ({ className }: IHeroSectionProps) => {
         <SearchIcon className={cx('hero__icon')} />
         <Button
           className={cx('hero__button')}
-          variant="primary"
           size="small"
           startIcon={<SearchIcon aria-hidden="true" />}>
           Click me
+        </Button>
+        <Button
+          href="/blog"
+          className={cx('hero__link')}
+          size="small"
+          ariaLabel="Link"
+          title="Link"
+          endIcon={<SearchIcon aria-hidden="true" />}>
+          Link
+        </Button>
+        <Button variant="primary" size="large">
+          Primary
+        </Button>
+        <Button variant="secondary" size="small">
+          Secondary
+        </Button>
+        <Button variant="primary" size="medium" isSquare>
+          Square
+        </Button>
+        <Button variant="ghost" size="large">
+          Ghost
         </Button>
       </Container>
     </section>

@@ -5,7 +5,8 @@
     ".next/**",
     "dist/**",
     "build/**",
-    "src/styles/_normalize.scss"
+    "src/styles/_normalize.scss",
+    "src/styles/helpers/_mixins.scss"
   ],
   "rules": {
     "color-no-invalid-hex": true,

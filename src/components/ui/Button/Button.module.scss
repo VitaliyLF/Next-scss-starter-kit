@@ -1,73 +1,106 @@
 .button {
-  background-color: var(--color-primary);
-  color: var(--color-light);
-  padding: rem(10) rem(20);
-  border-radius: rem(10);
+  --button-padding: 1em 1.5em;
+  --button-gap: 0.5em;
+  --button-bg: #c3ce67;
+  --button-color: var(--color-light);
+  --button-hover-bg: var(--color-primary-dark);
+  --button-hover-color: var(--color-light);
+  --button-border-width: 1px;
+  --button-border-style: solid;
+  --button-border-color: var(--button-bg);
+  --button-border-radius: 0.5em;
+  --button-font-weight: 400;
+  --button-font-size: rem(16);
+
+  display: inline-flex;
+  align-items: center;
+  gap: var(--button-gap);
+  padding: var(--button-padding);
+  border-width: var(--button-border-width);
+  border-style: var(--button-border-style);
+  border-color: var(--button-border-color);
+  border-radius: var(--button-border-radius);
+  font-weight: var(--button-font-weight, 400);
+  font-size: var(--button-font-size, rem(16));
+  font-family: sans-serif;
+  background-color: var(--button-bg);
+  color: var(--button-color);
+
+  & svg {
+    width: auto;
+    flex: none;
+    fill: currentcolor;
+    color: currentcolor;
+  }
+
+  @include hover {
+    background-color: var(--button-hover-bg);
+    color: var(--button-hover-color);
+  }
+
+  &:active {
+    scale: 95%;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: rem(2) dotted var(--button-bg);
+    outline-offset: rem(4);
+    transition-duration: 0s !important;
+  }
 
   &.primary {
-    background-color: var(--color-primary);
-    color: var(--color-light);
+    --button-bg: var(--color-primary);
+    --button-color: var(--color-light);
+    --button-hover-bg: var(--color-primary-dark);
+    --button-hover-color: var(--color-light);
   }
 
   &.secondary {
-    background-color: var(--color-secondary);
-    color: var(--color-light);
+    --button-bg: var(--color-secondary);
+    --button-color: var(--color-light);
+    --button-hover-bg: var(--color-secondary-dark);
+    --button-hover-color: var(--color-dark);
+  }
+
+  &.ghost {
+    --button-bg: transparent;
+    --button-color: var(--color-primary);
+    --button-hover-bg: transparent;
+    --button-hover-color: var(--color-primary);
   }
 
   &.small {
-    padding: rem(10) rem(20);
+    --button-padding: #{rem(10)} #{rem(20)};
   }
 
   &.medium {
-    padding: rem(15) rem(30);
+    --button-padding: #{rem(15)} #{rem(30)};
   }
 
   &.large {
-    padding: rem(20) rem(40);
+    --button-padding: #{rem(20)} #{rem(40)};
   }
 
   &.fullWidth {
     width: 100%;
   }
 
-  &.text {
-    background-color: transparent;
-    color: var(--color-primary);
+  &.square {
+    --button-border-radius: 0;
   }
 
   &.disabled {
     opacity: 0.5;
+    pointer-events: none;
     cursor: not-allowed;
   }
 
   &.loading {
     opacity: 0.5;
     cursor: progress;
-  }
-
-  &:has(svg) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: rem(10);
-  }
-
-  @include hover {
-    background-color: red;
-    color: black;
-
-    svg {
-      color: currentcolor;
-    }
-  }
-
-  &:active {
-    scale: 0.9;
-  }
-
-  &:focus-visible {
-    outline: rem(2) dotted var(--color-primary);
-    outline-offset: rem(4);
-    transition-duration: 0s !important;
   }
 }

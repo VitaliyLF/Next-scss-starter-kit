@@ -101,14 +101,3 @@ select,
 svg * {
   transition-duration: var(--transition-duration);
 }
-
-a {
-  @include hover {
-    color: var(--color-accent);
-  }
-}
-
-:focus-visible {
-  outline: rem(2) dashed var(--color-light);
-  outline-offset: rem(4);
-}
