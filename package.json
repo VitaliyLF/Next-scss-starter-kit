@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "npm run open-browser && next dev --turbopack",
     "build": "npm run lint && npm run format && npm run svgo && next build",
     "start": "next start",
     "lint": "next lint  && npm run stylelint",
@@ -11,7 +11,8 @@
     "svgo": "svgo -f src/components/icons",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
     "stylelint": "stylelint \"src/**/*.{scss,sass}\" --fix",
-    "analyze": "cross-env ANALYZE=true next build"
+    "analyze": "cross-env ANALYZE=true next build",
+    "open-browser": "start http://localhost:3000"
   },
   "dependencies": {
     "next": "^15.2.4",
