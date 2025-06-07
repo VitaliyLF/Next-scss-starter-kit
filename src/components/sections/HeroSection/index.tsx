@@ -1,3 +1,4 @@
+import ProfileIcon from '@/components/icons/profile-icon.svg'
 import SearchIcon from '@/components/icons/search-icon.svg'
 import { Container } from '@/components/layout/Container'
 import { Button } from '@/components/ui/Button'
@@ -15,10 +16,7 @@ export const HeroSection = ({ className }: IHeroSectionProps) => {
       <Container className={cx('hero__container')}>
         HeroSection
         <SearchIcon className={cx('hero__icon')} />
-        <Button
-          className={cx('hero__button')}
-          size="small"
-          startIcon={<SearchIcon aria-hidden="true" />}>
+        <Button className={cx('hero__button')} size="small" startIcon={<SearchIcon />}>
           Click me
         </Button>
         <Button
@@ -27,11 +25,14 @@ export const HeroSection = ({ className }: IHeroSectionProps) => {
           size="small"
           ariaLabel="Link"
           title="Link"
-          endIcon={<SearchIcon aria-hidden="true" />}>
+          endIcon={<SearchIcon />}>
           Link
         </Button>
         <Button variant="primary" size="large">
           Primary
+        </Button>
+        <Button isLoading variant="primary" size="large">
+          Loading
         </Button>
         <Button variant="secondary" size="small">
           Secondary
@@ -41,6 +42,17 @@ export const HeroSection = ({ className }: IHeroSectionProps) => {
         </Button>
         <Button variant="ghost" size="large">
           Ghost
+        </Button>
+        <Button
+          variant="primary"
+          ariaLabel="Search"
+          size="large"
+          href="/blog"
+          startIcon={<SearchIcon />}></Button>
+        <Button variant="secondary" size="large" href="/blog" startIcon={<ProfileIcon />}></Button>
+        <Button variant="secondary" size="large" iconSize={42} endIcon={<ProfileIcon />}></Button>
+        <Button variant="secondary" size="large" iconSize="large" endIcon={<ProfileIcon />}>
+          Profile
         </Button>
       </Container>
     </section>

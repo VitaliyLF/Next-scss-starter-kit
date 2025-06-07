@@ -40,6 +40,9 @@ const nextConfig: NextConfig = {
               loader: '@svgr/webpack',
               options: {
                 icon: '1em',
+                svgProps: {
+                  'aria-hidden': 'true',
+                },
                 svgoConfig: {
                   plugins: [
                     {

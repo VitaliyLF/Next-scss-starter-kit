@@ -24,6 +24,7 @@ export const Button = ({
   isActive,
   isDisabled,
   isLoading,
+  iconSize = 'medium',
   ...props
 }: IButtonProps) => {
   const buttonClass = cx('button', className, {
@@ -42,9 +43,12 @@ export const Button = ({
     [styles.endIcon]: endIcon,
   })
 
+  const iconStyle =
+    typeof iconSize === 'number' ? ({ '--icon-size': `${iconSize}px` } as React.CSSProperties) : {}
+
   const buttonContent = (
     <>
-      {isLoading && <span className={cx('button__loading')} />}
+      {isLoading && <span className={cx('button__loading')}>...</span>}
       {startIcon && startIcon}
       {children}
       {endIcon && endIcon}
@@ -58,7 +62,9 @@ export const Button = ({
         className={buttonClass}
         aria-label={ariaLabel}
         title={title}
-        target={targetBlank ? '_blank' : '_self'}>
+        target={targetBlank ? '_blank' : '_self'}
+        data-icon-size={iconSize}
+        style={iconStyle}>
         {buttonContent}
       </Link>
     )

@@ -27,10 +27,29 @@
   color: var(--button-color);
 
   & svg {
-    width: auto;
-    flex: none;
     fill: currentcolor;
     color: currentcolor;
+    width: var(--icon-size, 1.5em);
+    height: var(--icon-size, 1.5em);
+    aspect-ratio: 1;
+  }
+
+  &:has([data-icon-size='small']) {
+    svg {
+      width: 1em;
+    }
+  }
+
+  &:has([data-icon-size='medium']) {
+    svg {
+      width: 1.5em;
+    }
+  }
+
+  &:has([data-icon-size='large']) {
+    svg {
+      width: 2em;
+    }
   }
 
   @include hover {
@@ -102,5 +121,6 @@
   &.loading {
     opacity: 0.5;
     cursor: progress;
+    pointer-events: none;
   }
 }

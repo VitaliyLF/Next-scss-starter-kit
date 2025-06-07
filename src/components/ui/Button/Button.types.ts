@@ -1,9 +1,10 @@
 type ButtonType = 'button' | 'submit'
 type ButtonVariant = 'primary' | 'secondary' | 'ghost'
 type ButtonSize = 'small' | 'medium' | 'large'
+type ButtonIconSize = 'small' | 'medium' | 'large' | number
 
 export interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children: React.ReactNode
+  children?: React.ReactNode
   className?: string
   type?: ButtonType
   variant?: ButtonVariant
@@ -20,4 +21,5 @@ export interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEleme
   isActive?: boolean
   isDisabled?: boolean
   isLoading?: boolean
+  iconSize?: ButtonIconSize
 }
