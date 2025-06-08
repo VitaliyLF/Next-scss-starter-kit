@@ -61,16 +61,6 @@
     scale: 95%;
   }
 
-  &:focus {
-    outline: none;
-  }
-
-  &:focus-visible {
-    outline: rem(2) dotted var(--button-bg);
-    outline-offset: rem(4);
-    transition-duration: 0s !important;
-  }
-
   &.primary {
     --button-bg: var(--color-primary);
     --button-color: var(--color-light);
