@@ -7,6 +7,14 @@
     margin-bottom: 20px;
   }
 
+  &__content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition:
+      grid-template-rows var(--transition-duration) ease-in-out,
+      padding var(--transition-duration) ease-in-out;
+  }
+
   &__details {
     &[open] + .accordion__content {
       grid-template-rows: 1fr;
@@ -17,14 +25,6 @@
   &__title {
     font-size: 24px;
     line-height: 1.2;
-  }
-
-  &__content {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition:
-      grid-template-rows var(--transition-duration) ease-in-out,
-      padding var(--transition-duration) ease-in-out;
   }
 
   &__inner {

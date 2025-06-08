@@ -31,31 +31,29 @@ const nextConfig: NextConfig = {
 
     return config
   },
-  experimental: {
-    turbo: {
-      rules: {
-        '*.svg': {
-          loaders: [
-            {
-              loader: '@svgr/webpack',
-              options: {
-                icon: '1em',
-                svgProps: {
-                  'aria-hidden': 'true',
-                },
-                svgoConfig: {
-                  plugins: [
-                    {
-                      name: 'convertColors',
-                      params: { currentColor: true },
-                    },
-                  ],
-                },
+  turbopack: {
+    rules: {
+      '*.svg': {
+        loaders: [
+          {
+            loader: '@svgr/webpack',
+            options: {
+              icon: '1em',
+              svgProps: {
+                'aria-hidden': 'true',
+              },
+              svgoConfig: {
+                plugins: [
+                  {
+                    name: 'convertColors',
+                    params: { currentColor: true },
+                  },
+                ],
               },
             },
-          ],
-          as: '*.js',
-        },
+          },
+        ],
+        as: '*.js',
       },
     },
   },
