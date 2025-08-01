@@ -15,17 +15,17 @@ export const Accordion = ({
   text,
   className,
   group,
-  isOpenTarget = false,
+  isOpen = false,
 }: IAccordionProps) => {
-  const [isOpen, setIsOpen] = useState(!!isOpenTarget)
+  const [isOpenAccordion, setIsOpenAccordion] = useState(!!isOpen)
 
   const handleClick = () => {
-    setIsOpen(!isOpen)
+    setIsOpenAccordion(!isOpenAccordion)
   }
 
   return (
     <div className={cx('accordion', className)} onClick={handleClick}>
-      <details className={cx('accordion__details')} name={group} open={isOpen}>
+      <details className={cx('accordion__details')} name={group} open={isOpenAccordion}>
         <summary className={cx('accordion__summary')} onClick={(e) => e.stopPropagation()}>
           <span className={cx('accordion__title')} role="term" aria-details={id}>
             {title}

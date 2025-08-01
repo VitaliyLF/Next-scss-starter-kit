@@ -75,7 +75,7 @@ export const HeroSection = ({ className }: IHeroSectionProps) => {
             marginBottom: '200px',
           }}>
           <Accordion id="faq-1" title="Title" text="Text" group="faq" />
-          <Accordion id="faq-2" title="Title2" text="Text2" group="faq" isOpenTarget />
+          <Accordion id="faq-2" title="Title2" text="Text2" group="faq" isOpen />
           <Accordion id="faq-3" title="Title3" text="Text3" group="faq" />
           <Accordion id="faq-4" title="Title4" text="Text4" group="faq" />
         </div>

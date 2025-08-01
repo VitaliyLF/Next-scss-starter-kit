@@ -4,5 +4,5 @@ export interface IAccordionProps {
   text: string
   className?: string
   group?: string
-  isOpenTarget?: boolean
+  isOpen?: boolean
 }
