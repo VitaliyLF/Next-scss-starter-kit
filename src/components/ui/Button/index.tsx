@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 import styles from './Button.module.scss'
-import { ButtonProps } from './Button.types'
+import { IButton } from './Button.types'
 
 import classNames from 'classnames/bind'
 
@@ -27,7 +27,7 @@ const Button = ({
   isLoading,
   iconSize = 'medium',
   ...props
-}: ButtonProps) => {
+}: IButton) => {
   const buttonClass = cx('button', className, size, {
     primary: variant === 'primary',
     secondary: variant === 'secondary',

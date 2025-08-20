@@ -3,7 +3,7 @@ type ButtonVariant = 'primary' | 'secondary' | 'ghost'
 type ButtonSize = 'small' | 'medium' | 'large'
 type ButtonIconSize = 'small' | 'medium' | 'large' | number
 
-export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+export type IButton = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   // Обязательные свойства
   size: ButtonSize
 } & Partial<{
