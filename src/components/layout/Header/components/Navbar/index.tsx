@@ -4,10 +4,12 @@ import classNames from 'classnames/bind'
 
 const cx = classNames.bind(styles)
 
-export const Navbar = () => {
+const Navbar = () => {
   return (
     <nav className={cx('navbar')}>
       <div className="">Navbar</div>
     </nav>
   )
 }
+
+export default Navbar

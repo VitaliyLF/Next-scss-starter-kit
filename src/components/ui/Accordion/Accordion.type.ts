@@ -1,4 +1,4 @@
-export interface IAccordionProps {
+export type IAccordion = {
   id: string
   title: string
   text: string

@@ -1,10 +1,12 @@
 import styles from './Container.module.scss'
-import { IContainerProps } from './type'
+import { IContainer } from './Container.types'
 
 import classNames from 'classnames/bind'
 
 const cx = classNames.bind(styles)
 
-export const Container = ({ children, className }: IContainerProps) => {
+const Container = ({ children, className }: IContainer) => {
   return <div className={cx(className, 'container')}>{children}</div>
 }
+
+export default Container

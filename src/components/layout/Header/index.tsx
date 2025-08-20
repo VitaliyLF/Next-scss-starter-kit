@@ -1,5 +1,5 @@
-import { Logo } from '@/components/common/Logo'
-import { Container } from '@/components/layout/Container'
+import Logo from '@/components/common/Logo'
+import Container from '@/components/layout/Container'
 
 import styles from './Header.module.scss'
 
@@ -7,7 +7,7 @@ import classNames from 'classnames/bind'
 
 const cx = classNames.bind(styles)
 
-export const Header = () => {
+const Header = () => {
   return (
     <header className={cx('header')}>
       <Container className={cx('header__container')}>
@@ -19,3 +19,5 @@ export const Header = () => {
     </header>
   )
 }
+
+export default Header

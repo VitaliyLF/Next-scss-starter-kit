@@ -3,20 +3,13 @@
 import { useState } from 'react'
 
 import styles from './Accordion.module.scss'
-import { IAccordionProps } from './Accordion.type'
+import { IAccordion } from './Accordion.type'
 
 import classNames from 'classnames/bind'
 
 const cx = classNames.bind(styles)
 
-export const Accordion = ({
-  id,
-  title,
-  text,
-  className,
-  group,
-  isOpen = false,
-}: IAccordionProps) => {
+export const Accordion = ({ id, title, text, className, group, isOpen = false }: IAccordion) => {
   const [isOpenAccordion, setIsOpenAccordion] = useState(!!isOpen)
 
   const handleClick = () => {

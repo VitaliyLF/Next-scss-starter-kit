@@ -1,3 +1,3 @@
-export interface IHeroSectionProps {
+export type IHeroSection = {
   className?: string
 }

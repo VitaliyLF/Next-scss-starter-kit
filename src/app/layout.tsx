@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 
-import { Footer } from '@/components/layout/Footer'
-import { Header } from '@/components/layout/Header'
-import { Providers } from '@/components/layout/Providers'
+import Footer from '@/components/layout/Footer'
+import Header from '@/components/layout/Header'
+import Providers from '@/components/layout/Providers'
 
 import favicon from '@/public/favicon.ico'
 

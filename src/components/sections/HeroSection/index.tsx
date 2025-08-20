@@ -1,17 +1,17 @@
 import ProfileIcon from '@/components/icons/profile-icon.svg'
 import SearchIcon from '@/components/icons/search-icon.svg'
-import { Container } from '@/components/layout/Container'
+import Container from '@/components/layout/Container'
 import { Accordion } from '@/components/ui/Accordion'
 import { Button } from '@/components/ui/Button'
 
 import styles from './HeroSection.module.scss'
-import { IHeroSectionProps } from './HeroSection.types'
+import { IHeroSection } from './HeroSection.types'
 
 import classNames from 'classnames/bind'
 
 const cx = classNames.bind(styles)
 
-export const HeroSection = ({ className }: IHeroSectionProps) => {
+const HeroSection = ({ className }: IHeroSection) => {
   return (
     <section className={cx('hero', className)}>
       <Container className={cx('hero__container')}>
@@ -83,3 +83,5 @@ export const HeroSection = ({ className }: IHeroSectionProps) => {
     </section>
   )
 }
+
+export default HeroSection

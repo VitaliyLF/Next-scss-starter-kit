@@ -1,4 +1,4 @@
-export interface IContainerProps {
+export type IContainer = {
   children: React.ReactNode
   className?: string
 }

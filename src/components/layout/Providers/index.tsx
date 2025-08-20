@@ -6,7 +6,7 @@ import classNames from 'classnames/bind'
 
 const cx = classNames.bind(styles)
 
-export const Providers = ({ children }: { children: React.ReactNode }) => {
+const Providers = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className={cx('root')}>
       {children}
@@ -14,3 +14,5 @@ export const Providers = ({ children }: { children: React.ReactNode }) => {
     </div>
   )
 }
+
+export default Providers

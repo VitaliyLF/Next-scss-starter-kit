@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 import styles from './Button.module.scss'
-import { IButtonProps } from './Button.types'
+import { ButtonProps } from './Button.types'
 
 import classNames from 'classnames/bind'
 
@@ -26,21 +26,18 @@ export const Button = ({
   isLoading,
   iconSize = 'medium',
   ...props
-}: IButtonProps) => {
-  const buttonClass = cx('button', className, {
-    [styles.primary]: variant === 'primary',
-    [styles.secondary]: variant === 'secondary',
-    [styles.ghost]: variant === 'ghost',
-    [styles.small]: size === 'small',
-    [styles.medium]: size === 'medium',
-    [styles.large]: size === 'large',
-    [styles.square]: isSquare,
-    [styles.fullWidth]: isFullWidth,
-    [styles.active]: isActive,
-    [styles.disabled]: isDisabled,
-    [styles.loading]: isLoading,
-    [styles.startIcon]: startIcon,
-    [styles.endIcon]: endIcon,
+}: ButtonProps) => {
+  const buttonClass = cx('button', className, size, {
+    primary: variant === 'primary',
+    secondary: variant === 'secondary',
+    ghost: variant === 'ghost',
+    square: isSquare,
+    fullWidth: isFullWidth,
+    active: isActive,
+    disabled: isDisabled,
+    loading: isLoading,
+    startIcon: startIcon,
+    endIcon: endIcon,
   })
 
   const iconStyle =

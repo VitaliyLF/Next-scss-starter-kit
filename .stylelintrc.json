@@ -44,6 +44,8 @@
         "severity": "warning"
       }
     ],
+    "no-descending-specificity": [true, { "severity": "warning" }],
+    "selector-pseudo-class-no-unknown": [true, { "severity": "warning" }],
     "scss/at-rule-no-unknown": true
   }
 }
