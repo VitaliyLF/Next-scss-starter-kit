@@ -12,7 +12,8 @@
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
     "stylelint": "stylelint \"src/**/*.{scss,sass}\" --fix",
     "analyze": "cross-env ANALYZE=true next build",
-    "open-browser": "start http://localhost:3000"
+    "open-browser": "start http://localhost:3000",
+    "structure": "tree -I \"node_modules|dist|.sanity|.next\" | sed -E \"s/├── /- /g; s/└── /- /g; s/│/  |/g; s/`--/-/g\" > structure.md"
   },
   "dependencies": {
     "next": "^15.3.3",
