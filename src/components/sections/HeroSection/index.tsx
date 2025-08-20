@@ -1,8 +1,8 @@
 import ProfileIcon from '@/components/icons/profile-icon.svg'
 import SearchIcon from '@/components/icons/search-icon.svg'
 import Container from '@/components/layout/Container'
-import { Accordion } from '@/components/ui/Accordion'
-import { Button } from '@/components/ui/Button'
+import Accordion from '@/components/ui/Accordion'
+import Button from '@/components/ui/Button'
 
 import styles from './HeroSection.module.scss'
 import { IHeroSection } from './HeroSection.types'

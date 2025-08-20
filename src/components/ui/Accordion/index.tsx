@@ -9,7 +9,7 @@ import classNames from 'classnames/bind'
 
 const cx = classNames.bind(styles)
 
-export const Accordion = ({ id, title, text, className, group, isOpen = false }: IAccordion) => {
+const Accordion = ({ id, title, text, className, group, isOpen = false }: IAccordion) => {
   const [isOpenAccordion, setIsOpenAccordion] = useState(!!isOpen)
 
   const handleClick = () => {
@@ -33,3 +33,5 @@ export const Accordion = ({ id, title, text, className, group, isOpen = false }:
     </div>
   )
 }
+
+export default Accordion

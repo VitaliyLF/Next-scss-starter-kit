@@ -6,7 +6,8 @@ import { ButtonProps } from './Button.types'
 import classNames from 'classnames/bind'
 
 const cx = classNames.bind(styles)
-export const Button = ({
+
+const Button = ({
   children,
   className,
   type = 'button',
@@ -79,3 +80,5 @@ export const Button = ({
     </button>
   )
 }
+
+export default Button
