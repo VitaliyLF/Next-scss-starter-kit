@@ -16,9 +16,11 @@
     "structure": "tree -I \"node_modules|dist|.sanity|.next\" | sed -E \"s/├── /- /g; s/└── /- /g; s/│/  |/g; s/`--/-/g\" > structure.md"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.8.2",
     "next": "^15.3.3",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-redux": "^9.2.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",

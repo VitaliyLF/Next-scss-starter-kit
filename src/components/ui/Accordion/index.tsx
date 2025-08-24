@@ -10,7 +10,7 @@ import classNames from 'classnames/bind'
 const cx = classNames.bind(styles)
 
 const Accordion = ({ id, title, text, className, group, isOpen = false }: IAccordion) => {
-  const [isOpenAccordion, setIsOpenAccordion] = useState(!!isOpen)
+  const [isOpenAccordion, setIsOpenAccordion] = useState(() => !!isOpen)
 
   const handleClick = () => {
     setIsOpenAccordion(!isOpenAccordion)
